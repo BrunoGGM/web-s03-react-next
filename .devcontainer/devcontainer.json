@@ -1,0 +1,67 @@
+{
+  "name": "Sesión 3 – Introducción a React + Untitled UI",
+  "image": "mcr.microsoft.com/devcontainers/javascript-node:22",
+
+  "features": {
+    "ghcr.io/devcontainers/features/git-lfs:1": {}
+  },
+
+  "postCreateCommand": "git lfs install || true && (npm ci || npm install)",
+
+  "customizations": {
+    "vscode": {
+      "extensions": [
+        "dbaeumer.vscode-eslint",
+        "esbenp.prettier-vscode",
+        "bradlc.vscode-tailwindcss",
+        "formulahendry.auto-close-tag",
+        "formulahendry.auto-rename-tag",
+        "christian-kohler.npm-intellisense",
+        "dsznajder.es7-react-js-snippets",
+        "yoavbls.pretty-ts-errors",
+        "GitHub.copilot",
+        "usernamehw.errorlens",
+        "PKief.material-icon-theme",
+        "GulajavaMinistudio.mayukaithemevsc",
+        "kamikillerto.vscode-colorize",
+        "eamodio.gitlens",
+        "csstools.postcss"
+      ],
+      "settings": {
+        "workbench.colorTheme": "Mayukai Alucard",
+        "workbench.iconTheme": "material-icon-theme",
+        "editor.formatOnSave": true,
+        "editor.defaultFormatter": "esbenp.prettier-vscode",
+        "editor.codeActionsOnSave": {
+          "source.fixAll.eslint": true
+        },
+        "eslint.validate": [
+          "javascript",
+          "javascriptreact",
+          "typescript",
+          "typescriptreact",
+          "html",
+          "json"
+        ],
+        "tailwindCSS.includeLanguages": {
+          "plaintext": "html",
+          "javascript": "javascript",
+          "javascriptreact": "javascript",
+          "typescript": "typescript",
+          "typescriptreact": "typescript"
+        },
+        "tailwindCSS.experimental.classRegex": [
+          "cx\\(([^)]*)\\)",
+          "cva\\(([^)]*)\\)",
+          "cn\\(([^)]*)\\)"
+        ]
+      }
+    }
+  },
+
+  "forwardPorts": [5173, 3000],
+  "portsAttributes": {
+    "5173": { "label": "Vite/Preview", "onAutoForward": "notify" },
+    "3000": { "label": "Dev Server/Next", "onAutoForward": "notify" }
+  }
+}
